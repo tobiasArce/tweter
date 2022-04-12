@@ -2,7 +2,6 @@ package bd
 
 import (
 	"context"
-	"fmt"
 	"time"
 
 	"github.com/tobiasArce/tweter/models"
@@ -28,7 +27,6 @@ func BuscoPerfil(ID string) (models.Usuario, error) {
 	perfil.Password = ""
 
 	if err != nil {
-		fmt.Println("Registro no encontrado" + err.Error())
 		return perfil, err
 	}
 	return perfil, nil
