@@ -14,7 +14,6 @@ func LeoTweetsSeguidores(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Debe enviar el parametro pagina", http.StatusBadRequest)
 		return
 	}
-
 	pagina, err := strconv.Atoi(r.URL.Query().Get("pagina"))
 	if err != nil {
 		http.Error(w, "Debe enviar el parametro pagina como un entero mayor a 0", http.StatusBadRequest)
